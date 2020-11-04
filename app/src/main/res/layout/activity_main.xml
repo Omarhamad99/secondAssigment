@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bmi">
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="@android:color/holo_orange_light"
+        android:text="BMI Calculater"
+        android:id="@+id/header"/>
+
+    <TableLayout
+        android:id="@+id/talble"
+        android:layout_width="378dp"
+        android:layout_height="217dp"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="26dp">
+
+        <TableRow>
+
+            <TextView
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/edName"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="#DADADA"
+
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:text="Hight" />
+
+            <EditText
+                android:id="@+id/edHight"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="#DADADA"
+
+                />
+
+            <TextView
+
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CM" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:text="Wight" />
+
+            <EditText
+                android:id="@+id/edWight"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#DADADA" />
+
+            <TextView
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KG" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#DADADA"
+                android:id="@+id/GenderS"
+                />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/Calbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Calculate"
+                android:onClick="BMIcalbtn"/>
+
+            <Button
+                android:id="@+id/Savebtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="Saveonclick"
+                android:text="Save" />
+
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:background="#DADADA"
+        android:id="@+id/BMIres"
+        android:layout_width="wrap_content"
+        android:layout_height="104dp"
+        android:layout_below="@+id/talble"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="71dp"
+        android:text="" />
+
+    <Button
+        android:onClick="nextpage"
+        android:id="@+id/Nextbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BMIres"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="71dp"
+        android:text="Next" />
+</RelativeLayout>
